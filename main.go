@@ -3,6 +3,7 @@ package main
 import (
 	"github.com/gin-gonic/gin"
 	"EmailApi/Middlewares"
+	."EmailApi/Handlers"
 )
 
 func main(){
@@ -14,6 +15,7 @@ func main(){
 			"message": "pong",
 		})
 	})
+	r.GET("/v1/email_dispatch/getEmail",GetEmail)
 	r.Run(":9010")
 }
 
