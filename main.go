@@ -16,6 +16,7 @@ func main(){
 		})
 	})
 	r.GET("/v1/email_dispatch/getEmail",GetEmail)
-	r.Run(":9010")
+	r.POST("/v1/email_dispatch/replyEmail",ReplyEmail)
+	r.Run(":9009")
 }
 
